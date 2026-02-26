@@ -1,16 +1,57 @@
-# particle_demo
+Particle Celebration Demo (Flutter)
 
-A new Flutter project.
+A Flutter demo that shows a particle explosion when a task is completed. Pressing the Complete Task button triggers colorful particles that animate outward for 10 seconds.
 
-## Getting Started
+Features
 
-This project is a starting point for a Flutter application.
+Button-triggered particle animation
 
-A few resources to get you started if this is your first Flutter project:
+50 randomly generated particles per click
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Random colors, sizes, speeds, and directions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Animation lasts 10 seconds and disappears automatically
+
+Uses CustomPainter and AnimationController
+
+How It Works
+
+User clicks Complete Task
+
+Old animation stops and resets
+
+New particles are generated
+
+Animation starts and updates every frame
+
+After 10 seconds, particles disappear
+
+Particles move using trigonometry:
+
+dx = cos(direction) * speed * progress * 200
+dy = sin(direction) * speed * progress * 200
+
+CustomPainter draws each particle on the canvas every frame.
+
+How to Run
+
+Create a Flutter project:
+
+flutter create particle_demo
+
+Replace lib/main.dart with the demo code
+
+Run:
+
+flutter run
+Concepts Demonstrated
+
+Stateful widgets
+
+AnimationController
+
+CustomPainter
+
+Canvas drawing
+
+Basic particle motion using math
